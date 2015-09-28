@@ -6,6 +6,7 @@ package com.design.Command;
 public class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Command preCommand;
 
     public RemoteControl() {
         NoCommand noCommand = new NoCommand();
@@ -23,11 +24,17 @@ public class RemoteControl {
     }
 
     public void onButtonWasPushed(int slot) {
+        preCommand = offCommands[slot];
         onCommands[slot].execute();
     }
 
-    public void offButtonWarPushed(int slot){
+    public void offButtonWasPushed(int slot){
+        preCommand = offCommands[slot];
         offCommands[slot].execute();
+    }
+
+    public void undoButtonWasPushed(){
+        preCommand.undo();
     }
 
     public Command[] getOnCommands() {

@@ -27,6 +27,7 @@ public class RemoteControlTest {
         remoteControl.onButtonWasPushed(2);
         remoteControl.onButtonWasPushed(3);
         remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWarPushed(3);
+        remoteControl.offButtonWasPushed(3);
+        remoteControl.undoButtonWasPushed();
     }
 }
