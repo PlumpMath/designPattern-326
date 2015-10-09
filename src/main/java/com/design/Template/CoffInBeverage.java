@@ -26,6 +26,6 @@ public abstract class CoffInBeverage {
     public abstract void addCondiments();
 
     public void hook(){
-        
+
     }
 }
