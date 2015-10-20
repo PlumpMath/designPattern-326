@@ -6,11 +6,11 @@ import java.util.Iterator;
  * Created by lei on 15-10-19.
  */
 public class Waitress {
-    private PancakeHouseMenu pancakeHouseMenu;
-    private DinnerMenu dinnerMenu;
+    private Menu pancakeHouseMenu;
+    private Menu dinnerMenu;
 
     public void printMenu() {
-        Iterator pancakeIterator = pancakeHouseMenu.creatorIterator();
+        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         Iterator dinnerIterator = dinnerMenu.createIterator();
         System.out.println("......Breakfast.........");
         printMenu(pancakeIterator);

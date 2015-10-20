@@ -6,10 +6,10 @@ import java.util.Iterator;
 /**
  * Created by lei on 15-10-19.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     private ArrayList menuItems;
 
-    public Iterator creatorIterator() {
+    public Iterator createIterator() {
         return menuItems.iterator();
     }
 
