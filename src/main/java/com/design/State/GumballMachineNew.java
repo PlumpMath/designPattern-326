@@ -8,6 +8,7 @@ public class GumballMachineNew {
     private State noQuarterState;
     private State soldOutState;
     private State soldState;
+    private State winnerState;
 
     private State state = soldOutState;
     private int count = 0;
@@ -27,7 +28,7 @@ public class GumballMachineNew {
     public void turnCrank() {
         state.turnCrank();
     }
-    
+
 
     public void releaseBall() {
         System.out.println("A gumball comes rolling out the slot");
@@ -82,5 +83,13 @@ public class GumballMachineNew {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public State getWinnerState() {
+        return winnerState;
+    }
+
+    public void setWinnerState(State winnerState) {
+        this.winnerState = winnerState;
     }
 }
