@@ -16,6 +16,19 @@ public class GumballMachineNew {
         this.count = count;
     }
 
+    public void insertQuarter() {
+        state.insertQuarter();
+    }
+
+    public void ejectQuarter() {
+        state.ejectQuarter();
+    }
+
+    public void turnCrank() {
+        state.turnCrank();
+    }
+    
+
     public void releaseBall() {
         System.out.println("A gumball comes rolling out the slot");
         if(count != 0){
